@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.min.css";
+
+body {
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+}
+
+.main-title {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.list-group-item-info{
+  width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.scrolling-title {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+}
+
+.auto-textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  resize: none;
+  padding: 10px 0;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icon-button:hover {
+  color: #0d6efd; /* Couleur de survol Bootstrap primary */
+}
+
+
+/*.fixed-bottom {*/
+/*  position: fixed;*/
+/*  bottom: 20px;*/
+/*  left: 50%;*/
+/*  transform: translateX(-50%);*/
+/*  z-index: 1000;*/
+/*  transition: all 0.3s ease;*/
+/*}*/
+
+
+
