@@ -1,6 +1,14 @@
 function Tester(){
-  alert('bien venue sur mon site');
+  document.querySelector('.auto-textarea').addEventListener('input', function() {
+    // Réinitialise la hauteur
+    this.style.height = 'auto';
+
+    // Définit la nouvelle hauteur basée sur le contenu
+    const newHeight = Math.min(this.scrollHeight, 200); // 200px est la hauteur max
+    this.style.height = newHeight + 'px';
+  });
 }
+
 
 function handleScroll() {
   const container = document.querySelector('.container');

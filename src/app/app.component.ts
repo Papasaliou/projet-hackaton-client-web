@@ -41,7 +41,6 @@ export class AppComponent implements OnInit{
         console.log("erreur de soumission du fichier"+ err)
       }
       }
-
       )
     }
 

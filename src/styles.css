@@ -32,6 +32,12 @@ body {
   display: inline-block;
   animation: scroll-left 20s linear infinite;
 }
+.overflow-auto {
+  overflow-x: hidden;  /* Cache le défilement horizontal */
+  overflow-y: visible;    /* Garde le défilement vertical si nécessaire */
+  word-wrap: break-word;
+  white-space: normal;
+}
 
 .auto-textarea {
   border: none;
@@ -39,28 +45,39 @@ body {
   background: transparent;
   resize: none;
   padding: 10px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
 }
+    /* ajoute une barre de défilement si nécessaire */
 
 .icon-button {
   background: none;
   border: none;
   cursor: pointer;
   padding: 5px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.bi{
+  font-weight: bold;
+  font-size: 60px;
+
 }
 
 .icon-button:hover {
   color: #0d6efd; /* Couleur de survol Bootstrap primary */
 }
 
+.container{
+  height: 200px;
+}
 
-/*.fixed-bottom {*/
-/*  position: fixed;*/
-/*  bottom: 20px;*/
-/*  left: 50%;*/
-/*  transform: translateX(-50%);*/
-/*  z-index: 1000;*/
-/*  transition: all 0.3s ease;*/
-/*}*/
+.custom-file-upload {
+  cursor: pointer;
+  display: inline-block;
+}
+
 
 
 

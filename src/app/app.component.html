@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <title>ClientWeb</title>
@@ -28,32 +28,49 @@
 
       </div>
       <div class="col-8 shadow-lg overflow-auto justify-content-center">
-        <p>{{question}} </p>
+          <p>{{question}} </p>
       </div>
       <div class="col-2">
 
       </div>
     </div>
   </div>
-  <div class="rounded-5 bg-light container w-75 d-flex align-items-center mt-5">
-    <div class="d-flex w-100 align-items-center gap-3 px-3"> <!-- Ajout d'un conteneur flex -->
-      <textarea class="auto-textarea flex-grow-1" [(ngModel)]="question" placeholder="Écrivez votre message ici..."></textarea>
-      <div class="input-icons d-flex gap-2 "> <!-- Ajout de gap entre les boutons -->
-        <input class="icon-button btn btn-secondary bi-paperclip" type="file" (click)="onFileselected($event)" title="Joindre un fichier">
-          <i class="bi bi-paperclip fs-6"></i>
-        <button class="icon-button" title="Joindre une image">
-          <i class="bi bi-image fs-6"></i>
-        </button>
-        <button class="icon-button">
-          <i class="bi bi-send fs-6" (click)="uploadFile()" title="Submit"></i>
-        </button>
-        <button class="icon-button" (click)="chatComponent()">
-          <i class="bi bi-search fs-6"  title="Submit"></i>
-        </button>
+
+
+
+  <div class="rounded-5 bg-light container w-75">
+    <div class="d-flex w-100 flex-column"> <!-- Changé en flex-column -->
+
+      <div class="row">
+      <!-- Textarea en dessous -->
+        <div class="col-10">
+          <div class="d-flex w-100 align-items-center gap-3 px-3">
+            <textarea class="auto-textarea flex-grow-1" [(ngModel)]="question" placeholder="Écrivez votre message ici..."></textarea>
+          </div>
+        </div>
+
+        <!-- Nouvelle div pour les boutons -->
+        <div class="col-2">
+          <div class="input-icons d-flex gap-2 p-2 align-self-start">
+            <label class="custom-file-upload icon-button">
+              <input type="file" class="d-none " (click)="onFileselected($event)">
+              <i class="bi bi-paperclip fs-6 text-dark"></i>
+            </label>
+            <button class="icon-button" title="Joindre une image">
+              <i class="bi bi-image fs-6"></i>
+            </button>
+            <button class="icon-button" (click)="chatComponent()">
+              <i class="bi bi-search fs-6"  title="Submit"></i>
+            </button>
+            <button class="icon-button">
+              <i class="bi bi-send fs-6" (click)="uploadFile()" title="Submit"></i>
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-
 
   <!-- Pour le menu laterale -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -84,19 +101,3 @@
 </router-outlet>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--&lt;!&ndash;<router-outlet>&ndash;&gt;-->
-
-<!--&lt;!&ndash;</router-outlet>&ndash;&gt;-->
